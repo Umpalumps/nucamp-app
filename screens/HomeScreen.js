@@ -11,7 +11,9 @@ const FeaturedItem = ({item}) => {
             <Card containerStyle={{padding: 0}}>
                 <Card.Image source={item.image} >
                     <View style={{justifyContent: 'center', flex: 1}}>
-                        <Text style={{color: 'white', textAlign: 'center', fontSize: 20}}>{item.name}</Text>
+                        <Text style={{color: 'white', textAlign: 'center', fontSize: 20}}>
+                            {item.name}
+                        </Text>
                     </View>
                 </Card.Image>
                 <Text style={{ margin: 20 }}>{item.description}</Text>
@@ -30,11 +32,11 @@ const HomeScreen = () => {
     const featPromotion = promotions.find((item) => item.featured);
     const featPartner = partners.find((item) => item.featured);
 
-
-    <ScrollView>
-        <FeaturedItem item={featCampsite} />
-        <FeaturedItem item={featPromotion} />
-        <FeaturedItem item={featPartner} />
-    </ScrollView>
+    return(
+        <ScrollView>
+            <FeaturedItem item={featCampsite} />
+            <FeaturedItem item={featPromotion} />
+            <FeaturedItem item={featPartner} />
+        </ScrollView>)
 }
 export default HomeScreen

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card } from 'react-native-elements';
+import { Card, ListItem, Avatar } from 'react-native-elements';
 import { ScrollView, Text } from 'react-native';
 import { PARTNERS } from '../shared/partners';
 
